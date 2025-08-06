@@ -2,7 +2,7 @@
 
 A powerful, self-documenting prompt enhancement system for Claude Code that automatically applies engineering standards and provides 18 different development modes through simple flags.
 
-> 🎩 **Hat tip to McKay** on X/Twitter for inspiring this project with his excellent ultrathink hook. This implementation builds on that foundation to create a comprehensive development assistant.
+> 🎩 **Hat tip to McKay** on [X/Twitter](https://x.com/mckaywrigley/status/1952466679239524624) for inspiring this project with his excellent ultrathink hook. This implementation builds on that foundation and extends it with engineering rigor and structured team workflows.
 
 ## What This Does
 
@@ -298,3 +298,30 @@ MIT - Use freely and customize to your needs!
 ---
 
 *Built with ❤️ for the Claude Code community. May your code be clean and your thinking be ultra.*
+
+## Enhanced Version Available
+
+This fork includes an enhanced version with BMad Method integration and anti-wrapper rule enforcement.
+
+See [Enhanced Features](README-additions.md) for details.
+
+### Quick Install
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+Choose option 1 for original, option 2 for enhanced, or option 3 for full BMad setup.
+```
+
+The enhanced hook:
+- Imports from original hook when available (preserves all functionality)
+- Adds BMad-specific context and flags
+- Enforces anti-wrapper rule in engineering standards
+- Falls back gracefully if original hook not found
+- Logs as "enhanced" version for tracking
+
+Install script provides three options:
+1. Original functionality only
+2. Enhanced with BMad integration  
+3. Full setup including BMad Method and MCP servers
