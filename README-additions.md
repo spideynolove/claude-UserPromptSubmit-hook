@@ -35,7 +35,12 @@ Use the official API of the specified package directly, as documented.
 git clone https://github.com/spideynolove/claude-UserPromptSubmit-hook
 cd claude-UserPromptSubmit-hook
 chmod +x install.sh
+
+# Install in current directory
 ./install.sh
+
+# Or install in specific project directory
+./install.sh /path/to/your/project
 ```
 
 ### Manual Setup

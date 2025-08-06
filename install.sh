@@ -4,11 +4,20 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR=$(pwd)
+
+# Check if target directory is provided
+if [ $# -eq 1 ]; then
+    PROJECT_DIR="$(cd "$1" && pwd)"
+else
+    PROJECT_DIR=$(pwd)
+fi
+
 CLAUDE_DIR="$PROJECT_DIR/.claude"
 
 echo "Claude Code UserPromptSubmit Hook Installer"
 echo "==========================================="
+echo "Installing to: $PROJECT_DIR"
+echo ""
 
 # Create .claude directory structure
 mkdir -p "$CLAUDE_DIR/hooks/UserPromptSubmit"
